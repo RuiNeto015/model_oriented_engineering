@@ -1,0 +1,38 @@
+?nsuri: http://www.example.org/cr2
+?render-egx: ../picto/cr2model2diagram.egx
+Model: {
+    name: "publico",
+    subject: {
+        name: "Article",
+        feature: [ 
+            { name: "Title"},
+            { name: "Author" },
+            { name: "Date" },
+            { name: "Contents" }
+         ],
+         userFeedbackComment: [ 
+            { name: "Comment", reply: false, commentType: SIMPLE,
+                moderationProcess: { 
+                    name: "VerifyComment", startStep: AutomaticValidation, 
+                    stepValidationStepAutomatic: [{ 
+                            name: "AutomaticValidation", 
+                            nextApprove: ManualValidation, 
+                            nextReject: End, 
+                            method: "AICheckForForbiddenWordsV2" 
+                        } ],
+                    stepValidationStepManual: [{ 
+                            name: "ManualValidation", 
+                            nextApprove: End, 
+                            nextReject: End 
+                        }],
+                    stepEnd: [{ 
+                            name: "End" 
+                        }]
+                }                
+            } 
+         ],
+         userFeedbackReview: [ 
+            { name: "Review", reviewType: ANNOTATED }
+         ]
+    }
+}

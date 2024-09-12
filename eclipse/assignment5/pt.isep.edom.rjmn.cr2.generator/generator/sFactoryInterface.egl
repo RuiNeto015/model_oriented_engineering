@@ -1,0 +1,9 @@
+package pt.isep.enorm.atb.[%=theModel.name.firstToLowerCase()%];
+
+import pt.isep.enorm.atb.[%=theModel.name.firstToLowerCase()%].domain.Comment;
+import pt.isep.enorm.atb.[%=theModel.name.firstToLowerCase()%].domain.ValidationCommentProcess;
+
+public interface SFactory {
+
+	ValidationCommentProcess getValidationProcess(Comment c);
+}

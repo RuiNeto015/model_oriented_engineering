@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_iOU4sOrDEe6FB-CFxfHbtQ" name="amazon3toUML">
+  <packageImport xmi:id="_DXyFgOrHEe6o_db5ZUCQSA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_iOU4serDEe6FB-CFxfHbtQ" name="domain">
+    <packagedElement xmi:type="uml:Class" xmi:id="_iOU4surDEe6FB-CFxfHbtQ" name="Product">
+      <ownedAttribute xmi:id="_31RPIOrHEe6o_db5ZUCQSA" name="Age"/>
+      <ownedAttribute xmi:id="_hzEIcAbwEe-Ph9L8VOq_Fw" name="Price"/>
+      <ownedAttribute xmi:id="_koYIsAbwEe-Ph9L8VOq_Fw" name="Title"/>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

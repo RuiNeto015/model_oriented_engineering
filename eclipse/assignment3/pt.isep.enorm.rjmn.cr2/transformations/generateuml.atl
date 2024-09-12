@@ -1,0 +1,36 @@
+-- @atlcompiler emftvm
+-- @path CR2=/pt.isep.edom.rjmn.cr2/model/cr2.ecore
+-- @nsURI UML=http://www.eclipse.org/uml2/5.0.0/UML
+
+module generateuml;
+
+create OUT: UML from IN: CR2;
+
+rule Model2Model {
+	from
+		m1: CR2!Model
+	to
+		m2: UML!Model (
+			name <- m1.name.toLowerCase(),
+			packagedElement <- Set{m2Domain}
+		),
+		m2Domain: UML!Package (
+			name <- 'domain',
+			packagedElement <- Set{m1.subject}
+		)
+	do {
+		('Model ' + m1.name + ' created').debug(); 
+	}
+}
+
+rule Subject2EntityClass {
+	from
+		a1: CR2!Subject
+	to
+		a2: UML!Class (
+			name <- a1.name
+		)
+	do {
+		('Entity Class ' + a1.name + ' created').debug(); 
+	}
+}

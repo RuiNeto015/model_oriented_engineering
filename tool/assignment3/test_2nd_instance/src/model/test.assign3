@@ -1,0 +1,14 @@
+Model Amazon {
+	subject Subject Product {
+		userFeedback {
+			Review ProductReview {
+				gradeType STARS
+				reviewType ONLYGRADE
+			}
+		}
+		feature { 
+			Feature Price,
+			Feature Title
+		}
+	}
+}

@@ -1,0 +1,21 @@
+Model name: Model1
+Subject name: Product
+Subject has: 
+	Features: Title, Description, Price
+	User feedback: 
+		Comment name: Comment1 
+			(reply, moderation)
+			Comment Type: SIMPLE
+			Moderation Process Name: ModerateComment
+				Steps: 
+					Start Step: Moderation1
+					Manual Step Name: Moderation1
+					If approved jump to: Moderation2
+					If rejected jump to: End1
+					Manual Step Name: Moderation2
+					If approved jump to: Moderation3
+					If rejected jump to: End1
+					Automatic Step Name: Moderation3
+					If approved jump to: End1
+					If rejected jump to: End1
+					End Step: End1

@@ -1,0 +1,21 @@
+@startuml
+
+	class [%=subject.name%] << (S,orchid) >> {
+	[%for (f in subject.feature) { %]
+		[%=f.name%] 
+	[%} %]
+	}	
+	 
+	[%for (uf in subject.userFeedback) { %]
+	
+		[% if(uf.isTypeOf(Review)) { %]
+		class [%=uf.name%] << (R,#FF7700) >> {
+		[% } else { %]
+		class [%=uf.name%] << (C,#FF0000) >> {		
+		[% } %]
+		}
+		
+		[%=subject.name%] *-> [%=uf.name%]
+	[%} %]
+	 
+@enduml

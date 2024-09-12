@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cr2:Model xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:cr2="http://www.example.org/cr2"
+    name="Amazon">
+  <subject name="Product">
+    <userFeedback
+        xsi:type="cr2:Review"/>
+    <userFeedback
+        xsi:type="cr2:Comment">
+      <moderationProcess
+          name="validation"
+          startStep="//@subject/@userFeedback.1/@moderationProcess/@step.1">
+        <step
+            xsi:type="cr2:End"/>
+        <step
+            xsi:type="cr2:Automatic"
+            name=""
+            nextApprove="//@subject/@userFeedback.1/@moderationProcess/@step.1"
+            nextReject="//@subject/@userFeedback.1/@moderationProcess/@step.0"/>
+      </moderationProcess>
+    </userFeedback>
+    <feature
+        name="Price"/>
+    <feature
+        name="Description"/>
+  </subject>
+</cr2:Model>

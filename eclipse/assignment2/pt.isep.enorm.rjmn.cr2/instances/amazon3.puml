@@ -1,0 +1,7 @@
+@startuml
+class Product << (S,#FF7700) >> {
+}
+class Review << (F,green) >> {
+}
+Product *-> Review
+@enduml

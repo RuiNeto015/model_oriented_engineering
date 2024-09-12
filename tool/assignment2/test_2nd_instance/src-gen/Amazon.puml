@@ -1,0 +1,13 @@
+@startuml
+' A diagram representation of the model Amazon
+' For Subject and Features of Subject
+class Product << (S,#FF7700) >> {
+Price
+Title
+}
+' For UserFeedback
+class ProductReview << (F,green) >> {
+}
+' For link between Subject and UserFeedback
+Product *-> ProductReview
+@enduml 

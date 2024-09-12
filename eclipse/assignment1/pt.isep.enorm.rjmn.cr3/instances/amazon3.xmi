@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ASCII"?>
+<cr3:Model xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:cr3="http://www.example.org/cr3"
+    name="Amazon">
+  <subject name="Product1">
+    <userFeedback
+        xsi:type="cr3:Review"
+        name="Review1"/>
+    <userFeedback
+        xsi:type="cr3:Review"
+        name="Review2"/>
+    <userFeedback
+        xsi:type="cr3:Review"
+        name="Review3"/>
+    <userFeedback
+        xsi:type="cr3:Comment"
+        name="Comment1">
+      <moderationProcess
+          name="ModerationProcess1"/>
+    </userFeedback>
+    <feature
+        name="Feature1"/>
+  </subject>
+</cr3:Model>

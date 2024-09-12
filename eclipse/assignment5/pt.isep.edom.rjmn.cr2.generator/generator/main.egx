@@ -1,0 +1,140 @@
+pre {
+	var theModel = Model.all.first();
+}
+
+rule Subject2Class 
+  transform subject : Subject {
+
+  // If we want this rule to be conditional on some boolean expression	
+  // guard : book.b_public
+
+  parameters {
+    // These parameters will be made available
+    // to the invoked template as variables
+    var params : new Map;
+    params.put("theModel", theModel);
+    params.put("isComment", Comment.all.size>0);
+    return params;
+  }
+
+  // The EGL template to be invoked
+  template : "subject2class.egl"
+
+  // Output file
+  target : "../src-gen/pt/isep/enorm/atb/"+ theModel.name + "/domain/" + subject.name + ".java"
+
+}
+
+rule Comment2Class 
+transform comment : Comment {
+
+  parameters {
+    // These parameters will be made available
+    // to the invoked template as variables
+    var params : new Map;
+    params.put("theModel", theModel);
+    params.put("isComment", Comment.all.size>0);
+    return params;
+  }
+
+  // The EGL template to be invoked
+  template : "comment2class.egl"
+
+  // Output file
+  target : "../src-gen/pt/isep/enorm/atb/"+ theModel.name + "/domain/" + comment.name + ".java"
+}
+
+rule MainClass 
+transform aModel : Model {
+
+  parameters {
+    // These parameters will be made available
+    // to the invoked template as variables
+    var params : new Map;
+    params.put("theModel", theModel);
+    params.put("isComment", Comment.all.size>0);
+    return params;
+  }
+  
+  // The EGL template to be invoked
+  template : "mainClass.egl"
+
+  // Output file
+  target : "../src-gen/pt/isep/enorm/atb/"+ theModel.name + "/Main.java"
+}
+
+rule SFactoryMainClass 
+transform aModel : Model {
+
+  parameters {
+    // These parameters will be made available
+    // to the invoked template as variables
+    var params : new Map;
+    params.put("theModel", theModel);
+    params.put("isComment", Comment.all.size>0);
+    return params;
+  }
+  
+  // The EGL template to be invoked
+  template : "sFactoryMainClass.egl"
+
+  // Output file
+  target : "../src-gen/pt/isep/enorm/atb/"+ theModel.name + "/SFactoryMain.java"
+}
+
+rule SFactoryInterface 
+transform aModel : Model {
+
+  parameters {
+    // These parameters will be made available
+    // to the invoked template as variables
+    var params : new Map;
+    params.put("theModel", theModel);
+    params.put("isComment", Comment.all.size>0);
+    return params;
+  }
+  
+  // The EGL template to be invoked
+  template : "sFactoryInterface.egl"
+
+  // Output file
+  target : "../src-gen/pt/isep/enorm/atb/"+ theModel.name + "/SFactory.java"
+}
+
+rule SFactoryDefaultImpl 
+transform aModel : Model {
+
+  parameters {
+    // These parameters will be made available
+    // to the invoked template as variables
+    var params : new Map;
+    params.put("theModel", theModel);
+    params.put("isComment", Comment.all.size>0);
+    return params;
+  }
+  
+  // The EGL template to be invoked
+  template : "sFactoryDefaultImplClass.egl"
+
+  // Output file
+  target : "../src-gen/pt/isep/enorm/atb/"+ theModel.name + "/SFactoryDefaultImpl.java"
+}
+
+rule FactoryInterface 
+transform aModel : Model {
+
+  parameters {
+    // These parameters will be made available
+    // to the invoked template as variables
+    var params : new Map;
+    params.put("theModel", theModel);
+    params.put("isComment", Comment.all.size>0);
+    return params;
+  }
+  
+  // The EGL template to be invoked
+  template : "factory.egl"
+
+  // Output file
+  target : "../src-gen/pt/isep/enorm/atb/"+ theModel.name + "/domain/Factory.java"
+}

@@ -1,0 +1,30 @@
+Model Publico {
+	subject Subject Article {
+		userFeedback {
+			reply
+			moderation
+			Comment Comment1 {
+				commentType SIMPLE
+				moderationProcess ModerationProcess ModerationProcess1 {
+					startStep Manual1
+					step {
+						Manual Manual1 {
+							nextApprove Automatic1
+							nextReject End1
+						},
+						Automatic Automatic1 {
+							nextApprove End1
+							nextReject End1
+						},
+						End End1
+					}
+				}
+			}
+		}
+		feature {
+			Feature Title,
+			Feature Text,
+			Feature Author
+		}
+	}
+}

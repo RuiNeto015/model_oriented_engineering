@@ -1,0 +1,21 @@
+rule cr2model2Graphviz 
+transform m : cr2::Model {
+	template : "cr2model2graphviz.egl"
+	parameters : Map {
+		"path" = Sequence{"Structure", m.name},
+		"icon" = "diagram-ffffff",
+		"format" = "plantuml",
+		"subject" = m.subject
+	}
+}
+
+rule ModerationProcess2Graphviz 
+transform p : cr2::ModerationProcess {
+	template : "moderationProcess2graphviz.egl"
+	parameters : Map{
+		"path" = Sequence{"Moderation Process", p.name},
+		"icon" = "diagram-c0c0c0",
+		"format" = "graphviz-dot",
+		"process" = p
+	}
+}

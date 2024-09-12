@@ -1,0 +1,57 @@
+[% out.setContentType("Java"); %]
+package pt.isep.enorm.atb.[%=theModel.name.firstToLowerCase()%].domain;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class [%=subject.name.firstToUpperCase()%] {
+	
+[% for (feature in subject.feature) { %]	
+	private String [%=feature.name.firstToLowerCase()%];
+[% } %]	
+
+[% if (isComment) { %]
+	private List<Comment> comments;	
+
+	public List<Comment> getComments() {
+		return comments;
+	}
+
+	public void setComments(List<Comment> comments) {
+		this.comments = comments;
+	}
+[% } %]
+
+[% for (feature in subject.feature) { %]
+  /**
+   * Gets the value of [%=feature.name.firstToLowerCase()%]
+   */
+   public String get[%=feature.name%]() {
+      return [%=feature.name.firstToLowerCase()%];
+   }
+
+  /**
+   * Sets the value of [%=feature.name.firstToLowerCase()%]
+   */
+   public void set[%=feature.name%](String [%=feature.name.firstToLowerCase()%]) {
+      this.[%=feature.name.firstToLowerCase()%] = [%=feature.name.firstToLowerCase()%];
+   }
+[% } %]
+		
+	protected [%=subject.name.firstToUpperCase()%]([% for (feature in subject.feature) { %][% if(feature!=subject.feature.first()) { %], [% } %]String [%=feature.name.firstToLowerCase()%] [% } %]) {
+[% for (feature in subject.feature) { %]	
+		this.[%=feature.name.firstToLowerCase()%]=[%=feature.name.firstToLowerCase()%]; [% } %]	
+		
+[% if (isComment) { %]		
+		this.comments=new ArrayList<Comment>(); [% } %]	
+		
+		[%= out.startPreserve("user code", true) %]
+		// begin user code
+		// end user code
+		[%= out.stopPreserve() %]					
+	}
+
+	public String toString() {
+		return [% for (feature in subject.feature) { %][% if(feature!=subject.feature.first()) { %]+ [% } %]" [%=feature.name%]: "+ this.[%=feature.name.firstToLowerCase()%] [% } %];		
+	}
+}

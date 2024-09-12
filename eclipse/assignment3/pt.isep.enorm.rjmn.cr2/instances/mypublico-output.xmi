@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cr2:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cr2="http://www.example.org/cr2" name="Publico">
+  <subject name="Article">
+    <userFeedback xsi:type="cr2:Comment" name="ReaderComment">
+      <moderationProcess name="ValidateComment">
+        <step xsi:type="cr2:Automatic" name="DetectForbidWords"/>
+        <step xsi:type="cr2:End"/>
+      </moderationProcess>
+    </userFeedback>
+    <feature name="Title"/>
+    <feature name="Author"/>
+    <feature name="Date"/>
+  </subject>
+</cr2:Model>

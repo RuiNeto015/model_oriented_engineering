@@ -1,0 +1,15 @@
+package pt.isep.enorm.atb.publico.domain;
+
+public class Factory {
+
+	public static Article newArticle( [% for (feature in theModel.subject.feature) { %]	[% if (feature != theModel.subject.feature.first()) { %], [% } %] String [%=feature.name.firstToLowerCase()%] [% } %]	) {
+		Article a=new Article(title, text, author);
+		return a;
+	}
+
+	public static Comment newComment(String author, String text, String date) {
+		Comment c=new Comment(author, text, date);
+		return c;
+	}
+	
+}

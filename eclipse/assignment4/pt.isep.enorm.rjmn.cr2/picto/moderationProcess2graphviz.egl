@@ -1,0 +1,44 @@
+digraph foo {
+
+[% /* First, the start step */ %]
+start [shape=circle] 
+
+[% /* Next, all the steps */ %]
+[%for (s in p.step) { %]
+
+	[%
+	/* generate a link a tooltip to the model element */
+	var tooltip = "Go to " + s.name + " in the editor";
+	var elementLabel = "<table border=\"0\"><tr>"
+			+ "<td href=\"javascript:top.showElement('" + s.id + "','" + s.eResource.uri + "')\""
+				+ " tooltip=\"" + tooltip + "\">"
+				+ s.name  
+				+ "</td></tr>";
+	if (s.isKindOf(Automatic)) {	
+		elementLabel = elementLabel+" <tr><td>"+"method: "+s.method+"</td></tr>";	
+	}		
+	elementLabel = elementLabel + " </table>";	
+	%]
+
+
+	[% if (s.isKindOf(End)) { %]
+		[%=s.name%] [shape=circle, label=<[%=elementLabel%]>]
+	[% } else { %]
+		[%=s.name%] [shape=box, label=<[%=elementLabel%]>]
+	[% } %]	
+[%} %]
+
+
+[% /* Next, for the flow */ %]	
+start -> [%=p.startStep.name%]
+
+[%for (s in p.step) { %]
+	[% if (s.isKindOf(ValidationStep)) { %]
+		[%=s.name%] -> [%=s.nextApprove.name%] [ label="approve" ]
+		[%=s.name%] -> [%=s.nextReject.name%] [ label="reject" ]
+	[% } %]
+[%} %]
+	
+
+} 
+

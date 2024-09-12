@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/gmfdiag/style" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_HaOnQOrHEe6o_db5ZUCQSA" type="PapyrusUMLClassDiagram" name="Class Diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_6UwwYOrHEe6o_db5ZUCQSA" type="Class_Shape">
+    <children xmi:type="notation:DecorationNode" xmi:id="_6UxXcOrHEe6o_db5ZUCQSA" type="Class_NameLabel"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_6UxXcerHEe6o_db5ZUCQSA" type="Class_FloatingNameLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_6UxXcurHEe6o_db5ZUCQSA" y="15"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_6UxXc-rHEe6o_db5ZUCQSA" type="Class_AttributeCompartment">
+      <children xmi:type="notation:Shape" xmi:id="_7VcKQOrHEe6o_db5ZUCQSA" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="amazon3toUML.uml#_31RPIOrHEe6o_db5ZUCQSA"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7VcKQerHEe6o_db5ZUCQSA"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_qojicAbwEe-Ph9L8VOq_Fw" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="amazon3toUML.uml#_hzEIcAbwEe-Ph9L8VOq_Fw"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_qojicQbwEe-Ph9L8VOq_Fw"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_qHVEsAbwEe-Ph9L8VOq_Fw" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="amazon3toUML.uml#_koYIsAbwEe-Ph9L8VOq_Fw"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_qHVEsQbwEe-Ph9L8VOq_Fw"/>
+      </children>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_6UxXdOrHEe6o_db5ZUCQSA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_6UxXderHEe6o_db5ZUCQSA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_6UxXdurHEe6o_db5ZUCQSA"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6UxXd-rHEe6o_db5ZUCQSA"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_6UxXeOrHEe6o_db5ZUCQSA" type="Class_OperationCompartment">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_6UxXeerHEe6o_db5ZUCQSA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_6UxXeurHEe6o_db5ZUCQSA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_6UxXe-rHEe6o_db5ZUCQSA"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6UxXfOrHEe6o_db5ZUCQSA"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_6UxXferHEe6o_db5ZUCQSA" type="Class_NestedClassifierCompartment">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_6UxXfurHEe6o_db5ZUCQSA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_6UxXf-rHEe6o_db5ZUCQSA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_6UxXgOrHEe6o_db5ZUCQSA"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6UxXgerHEe6o_db5ZUCQSA"/>
+    </children>
+    <element xmi:type="uml:Class" href="amazon3toUML.uml#_iOU4surDEe6FB-CFxfHbtQ"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6UwwYerHEe6o_db5ZUCQSA" x="160" y="240"/>
+  </children>
+  <styles xmi:type="notation:StringValueStyle" xmi:id="_HaOnQerHEe6o_db5ZUCQSA" name="diagram_compatibility_version" stringValue="1.4.0"/>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_HaOnQurHEe6o_db5ZUCQSA"/>
+  <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_HaOnQ-rHEe6o_db5ZUCQSA" diagramKindId="org.eclipse.papyrus.uml.diagram.class">
+    <owner xmi:type="uml:Model" href="amazon3toUML.uml#_iOU4sOrDEe6FB-CFxfHbtQ"/>
+  </styles>
+  <element xmi:type="uml:Model" href="amazon3toUML.uml#_iOU4sOrDEe6FB-CFxfHbtQ"/>
+</notation:Diagram>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ASCII"?>
+<cr2:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cr2="http://www.example.org/cr2" name="Amazon2">
+  <subject name="Product">
+    <userFeedback xsi:type="cr2:Review" name="Review"/>
+    <feature name="Price"/>
+  </subject>
+</cr2:Model>

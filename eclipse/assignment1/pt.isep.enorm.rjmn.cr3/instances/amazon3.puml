@@ -1,0 +1,22 @@
+@startuml
+class Product << (S,#FF7700) >> {
+}
+class Review1 << (F,green) >> {
+}
+class Review2 << (F,green) >> {
+}
+class Review3 << (F,green) >> {
+}
+class Comment1 << (F,green) >> {
+}
+class Feature1 << (F,red) >> {
+}
+Product *-> Review1
+Product *-> Review2
+Product *-> Review3
+Product *-> Comment1
+class ModerationProcess1 << (F,blue) >> {
+}
+Comment1 *-> ModerationProcess1
+Product *-> Feature1
+@enduml

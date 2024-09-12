@@ -1,0 +1,23 @@
+-- @atlcompiler emftvm
+-- @path CR2=/pt.isep.enorm.rjmn.cr2/model/cr2.ecore
+
+module addendstep;
+create OUT : CR2 refining IN : CR2;
+
+rule AddEndStep {
+	from
+		m1: CR2!ModerationProcess (
+			not m1.step -> exists(s | s.oclIsTypeOf(CR2!End))
+		)
+	to
+		m2: CR2!ModerationProcess (
+			step <- m1.step -> including(newEndStep)
+		),
+		newEndStep: CR2!End (
+			-- nothind to do here, because End has no attributes
+		)
+	do {
+		-- debug can be used to print to the console
+		('Applied AddEndStep for ModerationProcess ' + m1.name).debug();
+	}
+}

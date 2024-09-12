@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cr2:Model xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:cr2="http://www.example.org/cr2"
+    name="publico">
+  <subject name="Article">
+    <userFeedback
+        xsi:type="cr2:Comment"
+        name="Comment">
+      <moderationProcess
+          startStep="//@subject/@userFeedback.0/@moderationProcess/@step.0">
+        <step
+            xsi:type="cr2:Manual"
+            nextApprove="//@subject/@userFeedback.0/@moderationProcess/@step.1"
+            nextReject="//@subject/@userFeedback.0/@moderationProcess/@step.1"/>
+        <step
+            xsi:type="cr2:End"/>
+      </moderationProcess>
+    </userFeedback>
+    <feature
+        name="Title"/>
+    <feature
+        name="Text"/>
+    <feature
+        name="Author"/>
+  </subject>
+</cr2:Model>

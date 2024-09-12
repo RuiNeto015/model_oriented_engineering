@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated cr2 -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="pt.isep.enorm.atb.cr2.presentation.Cr2ModelWizardID"
+            name="%_UI_Cr2ModelWizard_label"
+            class="pt.isep.enorm.atb.cr2.presentation.Cr2ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Cr2ModelFile.gif">
+         <description>%_UI_Cr2ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated cr2 -->
+      <editor
+            id="pt.isep.enorm.atb.cr2.presentation.Cr2EditorID"
+            name="%_UI_Cr2Editor_label"
+            icon="icons/full/obj16/Cr2ModelFile.gif"
+            extensions="cr2"
+            class="pt.isep.enorm.atb.cr2.presentation.Cr2Editor"
+            contributorClass="pt.isep.enorm.atb.cr2.presentation.Cr2ActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
